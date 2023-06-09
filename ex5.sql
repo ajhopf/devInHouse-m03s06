@@ -1,0 +1,1 @@
+SELECT * FROM produto_preco pp LEFT JOIN produto p ON pp.id_produto = p.id;
