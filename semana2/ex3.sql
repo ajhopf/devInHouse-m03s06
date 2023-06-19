@@ -1,6 +1,6 @@
 --Criar uma Procedure que imprimi todos os dados da tabela Produto utilizando um Cursor
 
-CREATE OR REPLACE PROCEDURE imprimir_dados_produto IS
+CREATE OR REPLACE PROCEDURE ExibirTodosProdutos IS
     CURSOR c_produto IS SELECT * FROM produto;
     
     v_id PRODUTO.ID%TYPE;
