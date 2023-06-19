@@ -1,5 +1,7 @@
 --Criar uma Procedure que imprimi todos os dados da tabela Produto utilizando um Cursor
 
+--Na Procedure ExibirTodosProdutos colocar a exception NO_DATA_FOUD e imprimir a mensagem com Erro, dados não encontrados
+
 CREATE OR REPLACE PROCEDURE ExibirTodosProdutos IS
     CURSOR c_produto IS SELECT * FROM produto;
     
@@ -32,5 +34,9 @@ BEGIN
         
     END LOOP;        
     CLOSE c_produto;
+
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        DBMS_OUTPUT.PUT_LINE('Erro: DADOS NÃO ENCONTRADOS.'); 
 END;
-    
+
