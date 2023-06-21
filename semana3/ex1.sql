@@ -18,6 +18,5 @@ BEGIN
     ELSE
         RETURN v_valor;
     END IF;
-
 END;
     
