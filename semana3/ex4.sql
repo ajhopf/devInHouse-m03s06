@@ -1,0 +1,5 @@
+CREATE TABLE LogProduto(
+    ID NUMBER,  
+    Campo VARCHAR2(100) NOT NULL, 
+    ValorAntigo VARCHAR2(100) NOT NULL, 
+    NomeTabela VARCHAR2(100) NOT NULL);
